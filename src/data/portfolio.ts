@@ -43,9 +43,9 @@ export interface PortfolioData {
 export const portfolioData: PortfolioData = {
   hero: {
     name: "Matheus Costa de Jesus",
-    title: "Backend Engineer",
+    title: "Backend & Full-Stack Engineer",
     location: "Lauro de Freitas, Bahia, Brasil",
-    headline: "Desenvolvedor focado em arquitetura backend escalável (Java, Python, SQL). Trazendo uma visão única de observabilidade, monitoramento de KPIs e otimização de processos após cerca de 9 anos de experiência em operações industriais. Foco na criação de sistemas distribuídos e de alta disponibilidade.",
+    headline: "Desenvolvedor backend e full-stack com foco em Python, Java e SQL. Construo APIs, dashboards de dados públicos e ferramentas de infraestrutura, trazendo uma visão prática de observabilidade e confiabilidade após cerca de 9 anos em operações industriais críticas.",
     email: "matheuscojesus@gmail.com",
     linkedin: "https://linkedin.com/in/matheus-costa-de-jesus",
     github: "https://github.com/mathofjesus",
@@ -53,56 +53,67 @@ export const portfolioData: PortfolioData = {
   about: {
     education: "Estudante do 6º semestre de Ciência da Computação na Descomplica",
     completion: "Dezembro de 2027",
-    objective: "Atuar em instituições financeiras (fintechs/bancos) desenvolvendo soluções backend robustas e seguras.",
-    bio: "Após 9 anos atuando com automação de ponta e monitoramento de sistemas em operações industriais críticas, direcionei minha carreira para a Engenharia de Software. Essa bagagem me deu uma mentalidade focada em SRE, observabilidade extrema, troubleshooting sob pressão e otimização contínua de processos. Atualmente, aplico esses conceitos no desenvolvimento de arquiteturas backend escaláveis, sistemas distribuídos resilientes e APIs de alta disponibilidade."
+    objective: "Atuar em instituições financeiras e empresas de produto, desenvolvendo soluções backend robustas, seguras e observáveis.",
+    bio: "Após 9 anos atuando com automação e monitoramento de sistemas em operações industriais críticas, direcionei minha carreira para a Engenharia de Software. Essa bagagem me deu uma mentalidade focada em SRE, observabilidade, troubleshooting sob pressão e otimização contínua de processos. Hoje aplico esses conceitos em plataformas de dados públicos com FastAPI e Angular, serviços web em Flask e PostgreSQL, e ambientes Docker descartáveis para testes reproduzíveis."
   },
   skills: {
     primary: ["Java 21", "Python", "SQL"],
     backend: [
-      "Spring Boot 3.2",
+      "FastAPI",
+      "Flask",
+      "Spring Boot 3",
       "Spring Security",
-      "JWT (HS256)",
-      "PostgreSQL",
-      "Flyway migrations",
       "REST APIs",
-      "Docker",
+      "PostgreSQL",
+      "Supabase",
+      "Docker & Nginx",
       "CI/CD (GitHub Actions)"
     ],
     frontend: [
       "TypeScript",
+      "Angular 22",
       "React",
-      "Angular",
-      "React Native + Expo",
-      "Tailwind CSS"
+      "HTML5 / CSS3",
+      "Tailwind CSS",
+      "React Native + Expo"
     ],
     engineering: [
+      "pytest",
+      "Vitest / Jest",
       "JUnit 5",
-      "Git (rebase, merge, squash)",
-      "Arquitetura em Nuvem",
-      "SRE & Observabilidade"
+      "Playwright",
+      "Git",
+      "Observabilidade & SRE"
     ]
   },
   projects: [
     {
-      name: "Gestor de Finanças Pessoais (GFP)",
-      url: "https://github.com/mathofjesus/gestor-de-financas-pessoais",
-      description: "Plataforma financeira full-stack inspirada em padrões de fintechs.",
-      details: "Arquitetura Maven multi-módulo. Conta com autenticação JWT com token versioning, controle de acesso baseado em regras (RBAC), banco de dados PostgreSQL com migrações gerenciadas pelo Flyway, cobertura de testes automatizados superior a 80% (JUnit 5 + TestContainers) e pipeline de CI/CD integrado.",
-      tags: ["Java 21", "Spring Boot 3.2", "Preact", "TypeScript", "PostgreSQL", "Flyway", "JUnit 5", "CI/CD"]
+      name: "Dashboard de Dados Públicos",
+      url: "https://github.com/mathofjesus/Dashboard",
+      description: "Dashboard offline-first de população, saúde e malhas por município brasileiro.",
+      details: "Backend FastAPI com ingestão de dados do IBGE e do CNES e front Angular 22 servido como artefato estático. Preserva o contrato original de CLI, API JSON e arquivos processados da implementação em C, com a paridade validada por testes pytest e Vitest e deploy em Docker + Nginx.",
+      tags: ["Python", "FastAPI", "Angular 22", "IBGE/CNES", "pytest", "Docker", "Nginx"]
     },
     {
-      name: "Memory-game",
-      url: "https://github.com/mathofjesus/memory-game",
-      description: "Aplicativo mobile moderno de jogo de memória com otimização de performance.",
-      details: "Desenvolvido em React Native + Expo. Possui um Custom StorageManager com validação rígida de schemas, motor de jogo (gameEngine) totalmente desacoplado da camada visual, gestão robusta de estado e resolução técnica de memory leaks críticos.",
-      tags: ["React Native", "Expo", "TypeScript", "State Management", "Performance Tuning"]
+      name: "Encurtador de Links",
+      url: "https://github.com/mathofjesus/Encurtador",
+      description: "Encurtador de URLs com códigos não sequenciais e expiração automática.",
+      details: "Flask + PostgreSQL (Supabase) atrás de Nginx. Gera códigos de 7 caracteres por permutação de Feistel com HMAC-SHA256 e Base62, resolve em O(1) pela chave primária e expurga links expirados via pg_cron ou GitHub Actions. CI com ruff e pytest.",
+      tags: ["Python", "Flask", "PostgreSQL", "Supabase", "Docker", "Nginx", "GitHub Actions"]
     },
     {
-      name: "Docker-Sandbox",
+      name: "Comparador de Investimentos",
+      url: "https://github.com/mathofjesus/ComparadorDeInvestimentosRendaFixa",
+      description: "CLI em Java que compara CDB, LCI/LCA e Tesouro Selic.",
+      details: "Projeto de arquivo único, sem build tool: projeta o montante líquido a partir de valor, prazo e percentual do CDI, aplica a tabela regressiva de IR e aponta a melhor alternativa. É uma ferramenta pessoal de apoio à decisão, não uma recomendação de investimento.",
+      tags: ["Java", "CLI", "Renda Fixa", "CDI/Selic", "IR regressivo"]
+    },
+    {
+      name: "docker-sandbox",
       url: "https://github.com/mathofjesus/docker-sandbox",
-      description: "Ambiente isolado e descartável para execução ultrarrápida de testes e protótipos.",
-      details: "Ferramenta utilitária voltada para desenvolvedores. Permite apontar para frontends TypeScript ou backends Java para rodar testes em contêineres Docker Alpine minimalistas. Os contêineres são totalmente destruídos após a conclusão, mantendo o sistema operacional host perfeitamente limpo.",
-      tags: ["Docker", "Java", "TypeScript", "DevOps", "Alpine Linux", "Automation"]
+      description: "Agent skill para rodar testes e protótipos em contêineres Alpine descartáveis.",
+      details: "Executa suítes TypeScript e backends Java/Spring em contêineres efêmeros com cap-drop, no-new-privileges, rootfs somente leitura e usuário não-root. O instalador detecta o harness do agente (Claude Code, Cursor, Codex, Hermes) e a validação cobre Vitest/Jest, Playwright, Spring Boot e PostgreSQL.",
+      tags: ["Docker", "Alpine", "Agent Skills", "Vitest/Jest", "Playwright", "Spring Boot", "Bash"]
     }
   ],
   experience: [

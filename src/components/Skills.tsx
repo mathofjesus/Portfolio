@@ -28,7 +28,7 @@ export function Skills() {
               </div>
               <div className="flex flex-col">
                 <span className="text-2xl sm:text-3xl font-extrabold text-amber-400 font-outfit">Java</span>
-                <span className="text-xs font-mono text-amber-500/70 mt-1 font-bold">Linguagem 21</span>
+                <span className="text-xs font-mono text-amber-500/70 mt-1 font-bold">Backend & JVM</span>
               </div>
             </div>
             <div className="relative group overflow-hidden rounded-2xl border border-sky-500/30 bg-sky-950/20 p-4 transition-all duration-300 hover:bg-sky-950/30 hover:border-sky-500/60">
@@ -37,7 +37,7 @@ export function Skills() {
               </div>
               <div className="flex flex-col">
                 <span className="text-2xl sm:text-3xl font-extrabold text-sky-400 font-outfit">Python</span>
-                <span className="text-xs font-mono text-sky-500/70 mt-1 font-bold">Data & Scripts</span>
+                <span className="text-xs font-mono text-sky-500/70 mt-1 font-bold">APIs & Dados</span>
               </div>
             </div>
             <div className="relative group overflow-hidden rounded-2xl border border-teal-500/30 bg-teal-950/20 p-4 transition-all duration-300 hover:bg-teal-950/30 hover:border-teal-500/60">
