@@ -3,7 +3,7 @@
 import React from "react";
 import { portfolioData } from "@/data/portfolio";
 import { GlowCard } from "./GlowCard";
-import { Cpu, Terminal, Database, GitFork } from "lucide-react";
+import { Cpu, Terminal, Database, GitFork, Monitor } from "lucide-react";
 
 export function Skills() {
   const { skills } = portfolioData;
@@ -18,7 +18,7 @@ export function Skills() {
           </span>
         </div>
 
-        {/* PROTAGONISMO VISUAL PARA JAVA, PYTHON E SQL */}
+        {/* PROTAGONISMO VISUAL PARA PYTHON, SQL E JAVA */}
         <div className="mb-8">
           <h3 className="text-xs uppercase font-mono text-zinc-500 tracking-wider mb-3">Tecnologias Principais</h3>
           <div className="grid grid-cols-3 gap-3">
@@ -27,8 +27,8 @@ export function Skills() {
                 01
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl sm:text-3xl font-extrabold text-amber-400 font-outfit">Java</span>
-                <span className="text-xs font-mono text-amber-500/70 mt-1 font-bold">Backend & JVM</span>
+                <span className="text-2xl sm:text-3xl font-extrabold text-amber-400 font-outfit">Python</span>
+                <span className="text-xs font-mono text-amber-500/70 mt-1 font-bold">Dados & Backend</span>
               </div>
             </div>
             <div className="relative group overflow-hidden rounded-2xl border border-sky-500/30 bg-sky-950/20 p-4 transition-all duration-300 hover:bg-sky-950/30 hover:border-sky-500/60">
@@ -36,8 +36,8 @@ export function Skills() {
                 02
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl sm:text-3xl font-extrabold text-sky-400 font-outfit">Python</span>
-                <span className="text-xs font-mono text-sky-500/70 mt-1 font-bold">APIs & Dados</span>
+                <span className="text-2xl sm:text-3xl font-extrabold text-sky-400 font-outfit">SQL</span>
+                <span className="text-xs font-mono text-sky-500/70 mt-1 font-bold">Análise & Modelagem</span>
               </div>
             </div>
             <div className="relative group overflow-hidden rounded-2xl border border-teal-500/30 bg-teal-950/20 p-4 transition-all duration-300 hover:bg-teal-950/30 hover:border-teal-500/60">
@@ -45,8 +45,8 @@ export function Skills() {
                 03
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl sm:text-3xl font-extrabold text-teal-400 font-outfit">SQL</span>
-                <span className="text-xs font-mono text-teal-500/70 mt-1 font-bold">Relacional (Pg)</span>
+                <span className="text-2xl sm:text-3xl font-extrabold text-teal-400 font-outfit">Java</span>
+                <span className="text-xs font-mono text-teal-500/70 mt-1 font-bold">Backend & JVM</span>
               </div>
             </div>
           </div>
@@ -54,6 +54,20 @@ export function Skills() {
 
         {/* SUB-SEÇÕES DE HABILIDADES */}
         <div className="space-y-6">
+          <div>
+            <div className="flex items-center gap-2 mb-2">
+              <Database className="w-4 h-4 text-cyan-500/75" />
+              <h4 className="text-xs uppercase font-mono text-zinc-400 tracking-wider">Dados & Análise</h4>
+            </div>
+            <div className="flex flex-wrap gap-1.5">
+              {skills.data.map((skill) => (
+                <span key={skill} className="px-2.5 py-1 text-xs rounded-lg bg-white/[0.03] border border-white/[0.05] text-zinc-300">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
           <div>
             <div className="flex items-center gap-2 mb-2">
               <Terminal className="w-4 h-4 text-amber-500/75" />
@@ -70,7 +84,7 @@ export function Skills() {
 
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <Database className="w-4 h-4 text-blue-500/75" />
+              <Monitor className="w-4 h-4 text-blue-500/75" />
               <h4 className="text-xs uppercase font-mono text-zinc-400 tracking-wider">Frontend & Mobile</h4>
             </div>
             <div className="flex flex-wrap gap-1.5">

@@ -3,7 +3,7 @@
 import React from "react";
 import { portfolioData } from "@/data/portfolio";
 import { GlowCard } from "./GlowCard";
-import { GraduationCap, Target } from "lucide-react";
+import { GraduationCap, Target, Award, Languages } from "lucide-react";
 
 export function About() {
   const { about } = portfolioData;
@@ -29,6 +29,23 @@ export function About() {
         <p className="text-sm text-zinc-300 leading-relaxed mb-6 font-sans">
           {about.bio}
         </p>
+
+        <div className="space-y-3 mb-6">
+          <div className="flex items-start gap-2">
+            <Award className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+            <p className="text-xs text-zinc-400 leading-relaxed font-sans">
+              <span className="uppercase font-mono text-zinc-500">Certificações:</span>{" "}
+              {about.certifications.join(" · ")}
+            </p>
+          </div>
+          <div className="flex items-start gap-2">
+            <Languages className="w-4 h-4 text-purple-500 shrink-0 mt-0.5" />
+            <p className="text-xs text-zinc-400 leading-relaxed font-sans">
+              <span className="uppercase font-mono text-zinc-500">Idiomas:</span>{" "}
+              {about.languages}
+            </p>
+          </div>
+        </div>
       </div>
 
       <div className="pt-4 border-t border-white/[0.05] mt-auto">

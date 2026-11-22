@@ -29,9 +29,12 @@ export interface PortfolioData {
     completion: string;
     objective: string;
     bio: string;
+    certifications: string[];
+    languages: string;
   };
   skills: {
     primary: string[];
+    data: string[];
     backend: string[];
     frontend: string[];
     engineering: string[];
@@ -43,47 +46,64 @@ export interface PortfolioData {
 export const portfolioData: PortfolioData = {
   hero: {
     name: "Matheus Costa de Jesus",
-    title: "Backend & Full-Stack Engineer",
+    title: "Dados | Backend | Python | SQL",
     location: "Lauro de Freitas, Bahia, Brasil",
-    headline: "Desenvolvedor backend e full-stack com foco em Python, Java e SQL. Construo APIs, dashboards de dados públicos e ferramentas de infraestrutura, trazendo uma visão prática de observabilidade e confiabilidade após cerca de 9 anos em operações industriais críticas.",
+    headline: "Estudante do 6º semestre de Ciência da Computação, com mais de 8 anos de experiência em ambientes industriais monitorando KPIs em tempo real e investigando anomalias de processo. Construo soluções de dados e backend com Python, SQL e PostgreSQL — ingestão de dados públicos, dashboards e serviços web com testes automatizados e Docker.",
     email: "matheuscojesus@gmail.com",
-    linkedin: "https://linkedin.com/in/matheus-costa-de-jesus",
+    linkedin: "https://www.linkedin.com/in/matheus-costa-de-jesus-/",
     github: "https://github.com/mathofjesus",
   },
   about: {
     education: "Estudante do 6º semestre de Ciência da Computação na Descomplica",
     completion: "Dezembro de 2027",
-    objective: "Atuar em instituições financeiras e empresas de produto, desenvolvendo soluções backend robustas, seguras e observáveis.",
-    bio: "Após 9 anos atuando com automação e monitoramento de sistemas em operações industriais críticas, direcionei minha carreira para a Engenharia de Software. Essa bagagem me deu uma mentalidade focada em SRE, observabilidade, troubleshooting sob pressão e otimização contínua de processos. Hoje aplico esses conceitos em plataformas de dados públicos com FastAPI e Angular, serviços web em Flask e PostgreSQL, e ambientes Docker descartáveis para testes reproduzíveis."
+    objective: "Busco oportunidades em ciência de dados, plataformas de dados e análise aplicada em bancos, fintechs e empresas de produto.",
+    bio: "Há mais de 8 anos atuo em operações industriais críticas, monitorando sistemas de automação e KPIs de uptime e produtividade em ambiente Linux. Analiso dados de desempenho, investigo anomalias até a causa e documento procedimentos. Hoje aplico essa base em engenharia de dados e backend: ingestão e tratamento de dados públicos, dashboards offline-first e APIs testadas, com foco em confiabilidade e clareza operacional.",
+    certifications: [
+      "Object-Oriented Developer",
+      "DB Developer",
+      "Programming Basics",
+      "Arquitetura e Organização de Computadores"
+    ],
+    languages: "Português nativo · Inglês intermediário (B1)"
   },
   skills: {
-    primary: ["Java 21", "Python", "SQL"],
+    primary: ["Python", "SQL", "Java"],
+    data: [
+      "PostgreSQL",
+      "Supabase",
+      "Ingestão IBGE/CNES",
+      "Análise de KPIs",
+      "Detecção de anomalias",
+      "Dashboards",
+      "pg_cron"
+    ],
     backend: [
       "FastAPI",
       "Flask",
-      "Spring Boot 3",
-      "Spring Security",
       "REST APIs",
-      "PostgreSQL",
-      "Supabase",
-      "Docker & Nginx",
-      "CI/CD (GitHub Actions)"
+      "OpenAPI/Swagger",
+      "Spring Boot",
+      "JWT"
     ],
     frontend: [
-      "TypeScript",
-      "Angular 22",
+      "Angular",
       "React",
-      "HTML5 / CSS3",
+      "HTML5",
+      "CSS3",
+      "SCSS",
       "Tailwind CSS",
-      "React Native + Expo"
+      "Angular Material"
     ],
     engineering: [
       "pytest",
-      "Vitest / Jest",
+      "Vitest",
+      "Jest",
       "JUnit 5",
       "Playwright",
-      "Git",
-      "Observabilidade & SRE"
+      "Maven / Gradle",
+      "Docker & Nginx",
+      "GitHub Actions",
+      "Linux"
     ]
   },
   projects: [
@@ -91,8 +111,8 @@ export const portfolioData: PortfolioData = {
       name: "Dashboard de Dados Públicos",
       url: "https://github.com/mathofjesus/Dashboard",
       description: "Dashboard offline-first de população, saúde e malhas por município brasileiro.",
-      details: "Backend FastAPI com ingestão de dados do IBGE e do CNES e front Angular 22 servido como artefato estático. Preserva o contrato original de CLI, API JSON e arquivos processados da implementação em C, com a paridade validada por testes pytest e Vitest e deploy em Docker + Nginx.",
-      tags: ["Python", "FastAPI", "Angular 22", "IBGE/CNES", "pytest", "Docker", "Nginx"]
+      details: "Backend FastAPI com ingestão de dados públicos do IBGE e do CNES e front Angular servido como artefato estático. Preserva o contrato original de CLI, API JSON e arquivos processados da implementação em C, com testes automatizados pytest e Vitest e deploy em Docker + Nginx.",
+      tags: ["Python", "FastAPI", "Angular", "IBGE/CNES", "pytest", "Docker", "Nginx"]
     },
     {
       name: "Encurtador de Links",
@@ -112,21 +132,21 @@ export const portfolioData: PortfolioData = {
       name: "docker-sandbox",
       url: "https://github.com/mathofjesus/docker-sandbox",
       description: "Agent skill para rodar testes e protótipos em contêineres Alpine descartáveis.",
-      details: "Executa suítes TypeScript e backends Java/Spring em contêineres efêmeros com cap-drop, no-new-privileges, rootfs somente leitura e usuário não-root. O instalador detecta o harness do agente (Claude Code, Cursor, Codex, Hermes) e a validação cobre Vitest/Jest, Playwright, Spring Boot e PostgreSQL.",
+      details: "Executa suítes TypeScript e backends Java/Spring em contêineres efêmeros com cap-drop, rootfs somente leitura e usuário não-root. O instalador detecta o harness do agente (Claude Code, Cursor, Codex, Hermes) e a validação cobre Vitest/Jest, Playwright, Spring Boot e PostgreSQL.",
       tags: ["Docker", "Alpine", "Agent Skills", "Vitest/Jest", "Playwright", "Spring Boot", "Bash"]
     }
   ],
   experience: [
     {
       company: "M. Dias Branco",
-      role: "Operador de Máquinas de Fabricação (Foco em Observabilidade & SRE Industrial)",
-      period: "Maio 2018 – Presente",
-      description: "Aplicação prática de conceitos de telemetria, observabilidade e confiabilidade de sistemas em larga escala no setor industrial.",
+      role: "Operador de Máquinas de Fabricação",
+      period: "Maio 2018 – Atual",
+      description: "Mais de 8 anos de experiência industrial em monitoramento de KPIs, análise de anomalias e melhoria contínua.",
       points: [
-        "Monitoramento contínuo de sistemas complexos de automação industrial através de painéis integrados de controle (IHM/SCADA), analisando métricas de vazão, temperatura e pressão em tempo real.",
-        "Análise preditiva de dados de desempenho industrial e indicadores-chave de performance (KPIs) para prevenção de gargalos e downtime de máquinas de alto custo.",
-        "Atuação direta em processos de troubleshooting de incidentes críticos, identificando anomalias na lógica do sistema físico e restabelecendo operações industriais sob pressão.",
-        "Elaboração de documentação técnica detalhada, guias de resolução de problemas rápidos e playbooks de SRE operacional para padronização de respostas a falhas."
+        "Monitorei em tempo real sistemas de automação industrial e KPIs de uptime e produtividade em ambiente Linux.",
+        "Analisei dados de desempenho para melhoria contínua e identifiquei anomalias de processo, investigando e resolvendo a causa.",
+        "Documentei procedimentos técnicos e configurações e treinei operadores.",
+        "Fui responsável pela conformidade de segurança e coordenei com times multidisciplinares."
       ]
     }
   ]

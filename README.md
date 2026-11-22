@@ -33,7 +33,7 @@ src/
 ├── components/
 │   ├── Hero.tsx         — Destaque: nome, cargo, links sociais
 │   ├── About.tsx        — Formação, bio e objetivo
-│   ├── Skills.tsx       — Grid de habilidades (Java, Python, SQL)
+│   ├── Skills.tsx       — Grid de habilidades (Python, SQL, Java)
 │   ├── Experience.tsx   — Trajetória M. Dias Branco / SRE industrial
 │   ├── Projects.tsx     — Cards de projetos com GitHub links
 │   ├── Footer.tsx       — Footer com ano corrente

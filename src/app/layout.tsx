@@ -18,13 +18,13 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  title: "Matheus Costa de Jesus | Backend Engineer",
-  description: "Portfólio de Matheus Costa de Jesus — Backend Engineer com foco em Java, Python, SQL e arquitetura escalável. Experiência de 9 anos em operações industriais com visão de observabilidade e confiabilidade (SRE).",
-  keywords: ["Matheus Costa de Jesus", "Backend Engineer", "Java", "Python", "SQL", "Spring Boot", "SRE", "Observabilidade", "Lauro de Freitas", "Bahia"],
+  title: "Matheus Costa de Jesus | Dados, Backend & Python",
+  description: "Portfólio de Matheus Costa de Jesus — dados e backend com Python, SQL e PostgreSQL. Mais de 8 anos em operações industriais monitorando KPIs e investigando anomalias, com foco em ingestão de dados públicos, dashboards e APIs testadas.",
+  keywords: ["Matheus Costa de Jesus", "Dados", "Backend", "Python", "SQL", "PostgreSQL", "FastAPI", "Angular", "Análise de KPIs", "Lauro de Freitas", "Bahia"],
   authors: [{ name: "Matheus Costa de Jesus" }],
   openGraph: {
-    title: "Matheus Costa de Jesus | Backend Engineer",
-    description: "Desenvolvedor focado em arquitetura backend escalável (Java, Python, SQL) com mentalidade SRE.",
+    title: "Matheus Costa de Jesus | Dados, Backend & Python",
+    description: "Soluções de dados e backend com Python, SQL e PostgreSQL — dados públicos, dashboards e APIs com testes automatizados.",
     type: "website",
     locale: "pt_BR",
   }

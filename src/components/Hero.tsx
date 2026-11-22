@@ -15,7 +15,7 @@ export function Hero() {
         <div className="flex items-center gap-3 mb-6">
           <span className="text-amber-500 text-2xl font-bold animate-pulse" aria-hidden="true">▲</span>
           <span className="text-xs uppercase font-mono tracking-widest text-zinc-400">
-            Portfolio // Backend Engineering
+            Portfolio // Dados &amp; Backend
           </span>
         </div>
 
